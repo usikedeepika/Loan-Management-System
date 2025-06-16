@@ -1,0 +1,1 @@
+The Loan Application Management System is a microservices-based web application designed to streamline loan-related processes such as customer registration, loan application, eligibility verification, and payments—all without relying on traditional paper-based methods.
