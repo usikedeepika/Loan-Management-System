@@ -109,6 +109,47 @@ public class CustomerServiceImpl implements CustomerService {
         return (l<=max_loan_amount)&&(c.getSalary()>=min_salary);
     }
 
+    
+    void sendMail(Customer customer)
+    {
+
+        SimpleMailMessage simpleMailMessage=new SimpleMailMessage();
+
+        simpleMailMessage.setFrom("usikedeepika312@gmail.com");
+        simpleMailMessage.setTo(customer.getEmail());
+        simpleMailMessage.setSubject("Congragulations...Details Registered SuccessFully");
+        simpleMailMessage.setText("Your account id is "+customer.getId());
+        javaMailSender.send(simpleMailMessage);
+
+
+    }
+
+
+      void sendLoanMail(String emailIdofCustomer,Loan loan){
+
+          SimpleMailMessage simpleMailMessage=new SimpleMailMessage();
+
+          simpleMailMessage.setFrom("usikedeepika312@gmail.com");
+          simpleMailMessage.setTo(emailIdofCustomer);
+          simpleMailMessage.setSubject("Congratulations...Loan Applied SuccessFully");
+          simpleMailMessage.setText("You can view your loan Details here \n "+loan);
+          javaMailSender.send(simpleMailMessage);
+
+
+      }
+
+      void sendTransactionMail(String emailId,double balance ,double transactedAmt){
+
+
+          SimpleMailMessage simpleMailMessage=new SimpleMailMessage();
+
+          simpleMailMessage.setFrom("usikedeepika312@gmail.com");
+          simpleMailMessage.setTo(emailId);
+          simpleMailMessage.setSubject("Congratulations...Your Loan Payment succeeded");
+          simpleMailMessage.setText(" Amount paid : "+transactedAmt+" Remaining loan amount :"+balance);
+          javaMailSender.send(simpleMailMessage);
+      }
+
 
 
 }
