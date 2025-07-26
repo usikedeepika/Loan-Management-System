@@ -3,7 +3,7 @@ The Loan Application Management System is a microservices-based web application 
 Features
 
 
-Customer microservices handles customer related data 
+  📘 CustomerMicroservice – API Endpoints
 1. POST /customer/add
 Description: Create a new customer.
 
@@ -30,4 +30,31 @@ Description: Check loan eligibility using query parameters.
 
 9. GET /customer/checkEligibility/{id}/{loanId}
 Description: Check loan eligibility using path variables.
+
+📘 LoanMicroservice – API Endpoints
+Base URL: /loan
+
+1. POST /loan/add
+Description: Create a new loan entry.
+
+2. GET /loan/{id}
+Description: Retrieve loan details by loan ID.
+
+3. GET /loan/customer/{id}
+Description: Get all loans associated with a specific customer ID.
+
+4. GET /loan/all
+Description: Retrieve a list of all loans.
+
+5. PUT /loan/update
+Description: Update loan details.
+
+6. DELETE /loan/forclose/{loanId}
+Description: Foreclose a loan by loan ID.
+
+7. GET /loan/status/{loanId}
+Description: Check the approval status of a loan.
+
+8. GET /loan/emiCalculate/{loanId}
+Description: Calculate and return the EMI amount for a given loan ID
 
