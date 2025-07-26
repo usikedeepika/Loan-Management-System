@@ -2,6 +2,11 @@ The Loan Application Management System is a microservices-based web application 
 
 Features
 
+This system allows customers to register, log in, and apply for loans while checking their eligibility and loan status.
+Admins or services can create, update, and foreclose loans, and also calculate EMI dynamically.
+Customers can make payments, and all transactions are recorded and retrieved by customer or loan ID.
+It supports full CRUD operations and provides endpoints for tracking loan lifecycle and customer financial activity.
+
 
   📘 CustomerMicroservice – API Endpoints
 1. POST /customer/add
