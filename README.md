@@ -58,3 +58,20 @@ Description: Check the approval status of a loan.
 8. GET /loan/emiCalculate/{loanId}
 Description: Calculate and return the EMI amount for a given loan ID
 
+📘 TransactionMicroservice – API Endpoints
+Base URL: /transaction
+
+1. POST /transaction/add
+Description: Add a new transaction record.
+
+2. GET /transaction/all
+Description: Retrieve a list of all transactions.
+
+3. GET /transaction/loans/{id}
+Description: Get all transactions associated with a specific loan ID.
+
+4. GET /transaction/customer/{id}
+Description: Get all transactions associated with a specific customer ID.
+
+
+
